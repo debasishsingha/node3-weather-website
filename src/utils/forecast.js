@@ -9,7 +9,7 @@ const forecast = (latitude, logitude, callback) => {
     } else if (response.body.error) {
       callback('Unable to find location.', undefined)
     } else {
-      callback(undefined, response.body.daily.data[0].summary)
+      callback(undefined, response.body.daily.data[0])
     }
   })
 }
